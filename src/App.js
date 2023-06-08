@@ -12,17 +12,16 @@ function App() {
   }
   const onSubmitHandler = e => {
     e.preventDefault();
-    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apikey}&tags=${search}}&per_page=24&format=json&nojsoncallback=1`).then(
+    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apikey}&tags=${search}&per_page=24&format=json&nojsoncallback=1`).then(
       response => setData(response.data.photos.photo)
     )
-    console.log(search)
   }
 
   return (
     <div className="App">
       <div className="nav-bar">
         <h2 className="logo"><i>Image Snapshot</i></h2>
-        <form onClick={onSubmitHandler}>
+        <form onSubmit={onSubmitHandler}>
           <input className="search" type="search" name="search" placeholder='enter category to search'
             onChange={changeHandler} value={search} /> <br /> <br />
           <input type="submit" name="submit" />

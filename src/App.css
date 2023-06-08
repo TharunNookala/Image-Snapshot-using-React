@@ -8,7 +8,7 @@
 
 .nav-bar {
     display: flex;
-    height: 50px;
+    height: 70px;
     text-align: center;
     align-items: center;
     background-color: red;
@@ -25,9 +25,11 @@ form {
 }
 
 form .search {
-    height: 2em;
-    width: 40%;
+    height: 100%;
+    width: 50%;
     align-self: left;
+    padding: 1rem;
+    border-radius: 2px;
 }
 
 .result-panel {
@@ -57,22 +59,7 @@ form .search {
     font-size: 2em;
     letter-spacing: 4px;
     overflow: hidden;
-    background: linear-gradient(90deg, #000, #fff, ■#000);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 3s linear infinite;
-    -webkit-background-clip: text;
-    /* -webkit-text-fill-color: rgba(255, 255, 255, 0); */
-}
-
-@keyframes animate {
-    0% {
-        background-position: -500%;
-    }
-
-    100% {
-        background-position: 500%;
-    }
+    margin-top: 1rem;
 }
 
 footer {
